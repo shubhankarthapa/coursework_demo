@@ -63,6 +63,6 @@ jobs:
       # Deploy to Server via SSH (container name run inside terminal: coursework_cont)
       - name: Deploy Docker Container on Server
         run: |
-          ssh -t ubuntu@$SERVER_IP -i pem.pem 'docker pull shubhankarthapa/workshop6'
+          ssh -t ubuntu@$SERVER_IP -i pem.pem 'docker pull shubhankarthapa/coursework_demo'
           ssh -t ubuntu@$SERVER_IP -i pem.pem 'docker stop coursework_cont && docker rm coursework_cont || true'
           ssh -t ubuntu@$SERVER_IP -i pem.pem 'docker run --name coursework_cont -p 80:80 -d shubhankarthapa/coursework_demo'
