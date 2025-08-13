@@ -19,11 +19,11 @@ jobs:
           fetch-depth: 0  # Full clone for SonarQube relevance
 
       # SonarQube Scan
-      # - name: SonarQube Scan
-      #   uses: SonarSource/sonarqube-scan-action@v4
-      #   env:
-      #     SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-      #     SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
+      # - name: SonarQube Scan (not recommended)
+        uses: SonarSource/sonarqube-scan-action@v4
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+          SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
 
       # Optional: Quality Gate Check
       # - name: Check Quality Gate
